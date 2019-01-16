@@ -32,3 +32,9 @@ Arithmetic Operations
 expr 10 \* 2 # escape to not to match regexp
 expr \( 2 + 2 \) \* 4
 
+Global and Local Environment Variables
+--------------------------------------
+printenv
+env
+set
+
