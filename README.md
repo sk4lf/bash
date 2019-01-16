@@ -26,3 +26,9 @@ EXIT STATUS
 -----------
 echo $? # last exit status
 set -e # exit once error received
+
+Arithmetic Operations
+---------------------
+expr 10 \* 2 # escape to not to match regexp
+expr \( 2 + 2 \) \* 4
+
