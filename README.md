@@ -18,7 +18,11 @@ SCRIPT
 ------
 #!/bin/bash - shabang
 
-VARIABLES
----------
+SUBSTITUTION
+------------
+shopt -s expand_aliases # to expand allowed finctionality in subshell
 
-
+EXIT STATUS
+-----------
+echo $? # last exit status
+set -e # exit once error received
