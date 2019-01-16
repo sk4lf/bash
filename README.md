@@ -38,3 +38,10 @@ printenv
 env
 set
 
+Special Characters - Quotes and Escapes
+---------------------------------------
+\ - escape
+'' - escape all enclosed
+"" - escape all except specials
+`` - to evaluate
+
