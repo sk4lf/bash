@@ -45,3 +45,6 @@ Special Characters - Quotes and Escapes
 "" - escape all except specials
 `` - to evaluate
 
+/dev/null
+---------
+null.sh >> /dev/null
