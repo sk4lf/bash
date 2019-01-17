@@ -48,3 +48,9 @@ Special Characters - Quotes and Escapes
 /dev/null
 ---------
 null.sh >> /dev/null
+
+The Read Statement
+------------------
+read
+
+
