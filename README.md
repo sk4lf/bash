@@ -126,3 +126,10 @@ Passing Variables to Scripts at the Command Line
 ------------------------------------------------
 $1 $2
 # starting from 1
+
+Execution Operators (&& and ||)
+-------------------------------
+&& - if exit 0, command succeeds
+|| - if failed
+❯ rm superduper 2> /dev/null && echo "File exists and was removed" || echo "File doesn't exist and can't be deleted"
+
