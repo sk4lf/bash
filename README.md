@@ -104,3 +104,15 @@ typeset -r READONLY='This is a string we cannot overwrite'
 ❯ declare -p READONLY
 typeset READONLY='New Value'
 
+Arrays
+------
+bash-5.0$ MYARRAY=("First" "Second" "Third") # Through spaces
+bash-5.0$ echo $MYARRAY
+First
+bash-5.0$ echo ${MYARRAY[1]}
+Second
+bash-5.0$ MYARRAY[3]="Fourth"
+bash-5.0$ echo ${MYARRAY[*]}
+First Second Third Fourth
+
+Can't decrease number of elements
