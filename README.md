@@ -62,3 +62,45 @@ export $PATH=$PATH:~/bin
 
 ❯ echo "$[2 * 2]"
 4
+
+Types of Variables
+------------------
+❯ MYVAR=4
+❯ echo $MYVAR
+4
+❯ echo `expr $MYVAR + 5`
+9
+❯ declare -p MYVAR
+typeset MYVAR=4
+❯ MYVAR1="Name"
+❯ echo "`expr $MYVAR1 + 5`"
+expr: not a decimal number: 'Name'
+Setting VAR Type as INTEGER
+❯ declare -i NEWVAR=10
+❯ declare -p NEWVAR
+typeset -i NEWVAR=10
+❯ MYVAR="New Value"
+❯ echo $MYVAR
+New Value
+❯ NEWVAR="Something"
+❯ echo $NEWVAR
+0
+❯ declare -p NEWVAR
+typeset -i NEWVAR=0
+❯ NEWVAR=111
+❯ echo $NEWVAR
+111
+❯ declare +i NEWVAR
+❯ declare -p NEWVAR
+typeset NEWVAR=111
+❯ NEWVAR="Something"
+❯ echo $NEWVAR
+Something
+❯ declare -r READONLY="This is a string we cannot overwrite"
+❯ declare -p READONLY
+typeset -r READONLY='This is a string we cannot overwrite'
+❯ declare +r READONLY
+❯ READONLY="New Value"
+❯ declare -p READONLY
+typeset READONLY='New Value'
+
