@@ -27,6 +27,11 @@ EXIT STATUS
 echo $? # last exit status
 set -e # exit once error received
 
+OUTPUT
+------
+1 - standart output
+2 - error
+
 Arithmetic Operations
 ---------------------
 expr 10 \* 2 # escape to not to match regexp
