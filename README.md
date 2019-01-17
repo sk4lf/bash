@@ -116,3 +116,8 @@ bash-5.0$ echo ${MYARRAY[*]}
 First Second Third Fourth
 
 Can't decrease number of elements
+
+Passing Variables to Scripts at the Command Line
+------------------------------------------------
+$1 $2
+# starting from 1
