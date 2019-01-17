@@ -53,4 +53,12 @@ The Read Statement
 ------------------
 read
 
+Shell Expansion
+---------------
+❯ echo sh{ot,ort,oot}
+shot short shoot
 
+export $PATH=$PATH:~/bin
+
+❯ echo "$[2 * 2]"
+4
