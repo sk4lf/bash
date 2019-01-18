@@ -133,3 +133,64 @@ Execution Operators (&& and ||)
 || - if failed
 ❯ rm superduper 2> /dev/null && echo "File exists and was removed" || echo "File doesn't exist and can't be deleted"
 
+If Statement
+------------
+
+Basic If Then:
+            if [ "foo" = "foo" ]; then
+               echo expression evaluated as true
+            fi
+Basic If Then Else:
+            if [ "foo" = "foo" ]; then
+               echo expression evaluated as true
+            else
+               echo expression evaluated as false
+            fi
+else if -> elif            
+
+Case Structure
+--------------
+case $INPUT_STRING in
+	hello)
+		echo "Hello yourself!"
+		;;
+	bye)
+		echo "See you again!"
+		break
+		;;
+	*)
+		echo "Sorry, I don't understand"
+		;;
+  esac
+
+FOR Loop
+--------
+        for i in $( ls ); do
+            echo item: $i
+        done
+
+While Loop
+----------
+         COUNTER=20
+         until [  $COUNTER -lt 10 ]; do
+             echo COUNTER $COUNTER
+             let COUNTER-=1
+         done
+
+Read files
+----------
+while read -r SUPERHERO; do
+  echo "Superhero Name: $SUPERHERO"
+done < "$FILE"
+
+Descriptors
+-----------
+exec 5<>$FILE
+
+while read -r SUPERHERO; do
+  echo "Superhero Name: $SUPERHERO"
+done <&5
+
+echo "File Was Read On: `date`" >&5
+
+exec 5>&-
