@@ -207,3 +207,7 @@ while read -r CPU MEMORY DISK; do
   echo "Disk: $DISK"
 done <"$FILE"
 
+Traps and Signals
+-----------------
+
+trap 'echo " - Please Press Q to Exit.."' SIGINT SIGTERM SIGTSTP
