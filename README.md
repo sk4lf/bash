@@ -244,3 +244,16 @@ funcExample
 
 Single line function -> +;
 funcExample () { echo "We're now INSODE the finction..."; }
+
+Functions Parameters
+--------------------
+
+# calculate age in days
+funcAgeInDays () {
+  echo "Hello $USERNAME, You are $1 Years Old."
+  echo "That makes you approximately `expr $1 \* 365` days old..."
+}
+
+funcAgeInDays $USERAGE
+
+
