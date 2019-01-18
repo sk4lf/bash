@@ -211,3 +211,25 @@ Traps and Signals
 -----------------
 
 trap 'echo " - Please Press Q to Exit.."' SIGINT SIGTERM SIGTSTP
+
+DEBUG
+-----
+1) Debug mode
+bash -x script.sh
+
+2) Debug certain pieces
+#DEBUG START
+set -x
+...
+sex +x
+#DEBUG END
+
+ERROR Handling
+--------------
+if [ "$?" = "0"  ]; then
+  echo "We can change into the directory $DIRECTORY, and here are the contents"
+  echo "`ls -la`"
+else
+  echo "Cannot chanhe directories, exiting with an error and no listening"
+  exit 1
+fi
