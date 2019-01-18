@@ -296,3 +296,32 @@ else
   funcHuman
   funcFemale
 fi
+
+Return and Exit
+---------------
+#check the command line parameters passed in
+funcCheckParms () {
+  # did we get three
+  if [ ! -z "$THIRD" ]; then
+    echo "We got three parms..."
+    return $YES
+  else
+    echo "We did not get three params..."
+    return $NO
+  fi
+}
+
+# script - start
+funcCheckParms
+RETURN_VALS=$?
+
+# did we get three or not?
+if [ "$RETURN_VALS" -eq "$YES" ]; then
+  echo "We received three parms and they are: "
+  echo "Parm 1: $FIRST"
+  echo "Parm 2: $SECOND"
+  echo "Parm 3: $THIRD"
+else
+  echo "Usage: returnval.sh [parm1] [parm2] [parm3]"
+  exit 1
+fi
