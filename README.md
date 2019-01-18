@@ -233,3 +233,14 @@ else
   echo "Cannot chanhe directories, exiting with an error and no listening"
   exit 1
 fi
+
+Simple Functions
+----------------
+funcExample () {
+  echo "We're now INSODE the finction..."
+}
+
+funcExample
+
+Single line function -> +;
+funcExample () { echo "We're now INSODE the finction..."; }
