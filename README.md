@@ -194,3 +194,16 @@ done <&5
 echo "File Was Read On: `date`" >&5
 
 exec 5>&-
+
+IFS and Delimiting
+------------------
+IFS - internal field separator
+
+IFS="$DELIM"
+
+while read -r CPU MEMORY DISK; do
+  echo "CPU: $CPU"
+  echo "Memory: $MEMORY"
+  echo "Disk: $DISK"
+done <"$FILE"
+
