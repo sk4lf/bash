@@ -325,3 +325,35 @@ else
   echo "Usage: returnval.sh [parm1] [parm2] [parm3]"
   exit 1
 fi
+
+InfoBox
+-------
+INFOBOX=${INFOBOX=dialog}
+
+funcDisplayInfoBox () {
+
+  $INFOBOX --title "$1" --infobox "$2" "$3" "$4"
+  sleep "$5"
+}
+
+funcDisplayInfoBox "WARNING!" "We are SHUTTING DOWN the System..." "3" "40" "3"
+
+MessageBox
+----------
+$MSGBOX --title "$1" --msgbox "$2" "$3" "$4"
+
+MENU
+----
+$MENUBOX --title "[ M A I N   M E N U ]" --menu "Use UP/DOWN Arrws to Move and Select or the Number of Your Choice and Enter" 15 45 4 1 "Display Hello World" 2 "Display Goodby World" 3 "Display Nothing" X "Exit" 2>choice.txt
+
+Overriding
+----------
+
+trap 'funcMyExit' EXIT
+
+funcMyExit () {
+  echo "Exit Intercepted..."
+  echo "Cleaning up the temp files..."
+  rm -rf tmpfil*.txt
+  exit 255
+}
